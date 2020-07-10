@@ -35,9 +35,6 @@ export class SearchCepComponent implements OnInit {
         },
         error => this.msgService.add(error.message)
       );
-    } else
-    {
-      this.CepResults = [];
-    }
+    } else { this.CepResults = []; }
   }
 }
