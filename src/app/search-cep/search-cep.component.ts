@@ -27,7 +27,7 @@ export class SearchCepComponent implements OnInit {
   onSubmit(cep) {
     if (cep.value)
     {
-      this.http.get<any>('http://localhost:10000/api/v1/cep/' + cep.value).subscribe(
+      this.http.get<any>('https://api-cep-node.herokuapp.com/api/v1/cep/' + cep.value).subscribe(
         data =>
         {
           this.CepResults = [];
