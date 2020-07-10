@@ -1,0 +1,32 @@
+
+<div>
+  <form>
+     <input type='text' id='cep' #CepKey placeholder='chave de busca'>
+     <button title='"Procurar' type='button' (click)='onSubmit(CepKey)'>Procurar</button>
+  </form>
+</div>
+
+<div *ngIf='CepResults.length > 0' >
+  <br>
+  <br>
+  <table border='1' width='80%'>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Cep</th>
+        <th>Bairro</th>
+        <th>Cidade / UF</th>
+        <th>Localidade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let CepItem of CepResults'>
+        <td>{{ CepItem.ID }}</td>
+        <td>{{ CepItem.cep }}</td>
+        <td>{{ CepItem.bairro }}</td>
+        <td>{{ CepItem.cidadeUf }}</td>
+        <td>{{ CepItem.localidade }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
