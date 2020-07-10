@@ -1,10 +1,12 @@
-FROM node:10 
-RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
-WORKDIR /home/node/app
-COPY package*.json ./
+### STAGE 1: Build ###
+FROM node:12.7-alpine AS build
+WORKDIR /usr/src/app
+COPY package.json package-lock.json ./
 RUN npm install
 COPY . .
-COPY --chown=node:node . .
-USER node
-EXPOSE 10000
-CMD [ "ng", "serve" ]
+RUN npm run build
+
+### STAGE 2: Run ###
+FROM nginx:1.17.1-alpine
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY --from=build /usr/src/app/dist/angular-buscarcep /usr/share/nginx/html
