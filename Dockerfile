@@ -12,4 +12,3 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY --from=build /usr/src/app/dist/angular-buscarcep /usr/share/nginx/html
 EXPOSE 80
 
-CMD["nginx","-g", "daemon off;"]
