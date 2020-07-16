@@ -37,9 +37,6 @@ export class SearchCepComponent implements OnInit {
 
     let endpoint = '';
 
-    //const kind = this.searchForm.controls['"searchkind'].value;
-    //const filter =  this.searchForm.controls['"filter'].value;
-
     const kind = this.searchForm.get('searchkind');
     const filter = this.searchForm.get('filter');
 
