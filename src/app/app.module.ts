@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { SearchCepComponent } from './search-cep/search-cep.component';
 import { MessagesComponent } from './messages/messages.component';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
    declarations: [
@@ -18,7 +20,9 @@ import { MessagesComponent } from './messages/messages.component';
    imports: [
       BrowserModule,
       AppRoutingModule,
-      HttpClientModule
+      HttpClientModule,
+      FormsModule,
+      ReactiveFormsModule
    ],
    providers: [],
    bootstrap: [
