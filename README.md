@@ -1,7 +1,7 @@
 # angular-buscarcep
 
 <p>
-   This project is a frontend to use with backend [apicepnode](https://github.com/avmesquita/cep-api-node) to query brazilian postal code.
+   This project is a frontend to use with backend (apicepnode)[https://github.com/avmesquita/cep-api-node] to query brazilian postal code.
 </p>
 
 
@@ -20,4 +20,3 @@
 	   Docker Hub Image => https://hub.docker.com/repository/docker/avmesquita/apicepnode
 	</li>
  </ul>
- 
