@@ -1,16 +1,16 @@
-apiVersion : apps/v1beta1
+apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: keyvansilverioangularbuscarcep 
+  name: angular-buscarcep
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: keyvansilverioangularbuscarcep 
+        app: angular-buscarcep
     spec:
       containers:
-        - name: keyvansilverioangularbuscarcep 
-          image: consultacep.azurecr.io/keyvansilverioangularbuscarcep
+        - name: angular-buscarcep 
+          image: consultacep.azurecr.io/angular-buscarcep:latest
           ports:
           - containerPort: 80
